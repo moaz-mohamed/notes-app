@@ -1,4 +1,4 @@
-const notes  = require('./notes.js'); 
+const notes = require('./notes.js');
 const chalk = require('chalk');
 const yargs = require('yargs');
 const { argv } = require('yargs');
@@ -44,7 +44,26 @@ yargs.command({
 
     },
     handler: () => {
-       notes.removeNote(argv.title);
+        notes.removeNote(argv.title);
+
+    }
+});
+
+
+// Search for a note
+yargs.command({
+    command: 'find',
+    describe: 'Find a note',
+    builder: {
+        title: {
+            describe: 'Title of note to be found',
+            demandOption: true,
+            type: 'string'
+        }
+
+    },
+    handler: () => {
+        notes.findNote(argv.title);
 
     }
 });
@@ -55,7 +74,7 @@ yargs.command({
     command: "list",
     describe: "List notes",
     handler: () => {
-        notes.forEach(note => (console.log(chalk.blue.bold(note.content))));
+        notes.listNotes();
     }
 });
 

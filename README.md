@@ -19,8 +19,20 @@ npm install
 node app.js add --title="Your note title" --body="Your note body"
 ```
 
-* To remove a note, choose remove command providing title of note to be removed
+* To remove a note, choose remove command providing title of the note to be removed
 
 ```JavaScript
 node app.js add --title="Your note title"
+```
+
+* To search for a note, choose find command providing title of the note to be found
+
+```JavaScript
+node app.js find --title="Your note title"
+```
+
+* To list all notes, choose list command
+
+```JavaScript
+node app.js list
 ```
