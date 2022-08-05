@@ -22,7 +22,7 @@ node app.js add --title="Your note title" --body="Your note body"
 * To remove a note, choose remove command providing title of the note to be removed
 
 ```JavaScript
-node app.js add --title="Your note title"
+node app.js remove --title="Your note title"
 ```
 
 * To search for a note, choose find command providing title of the note to be found
